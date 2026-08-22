@@ -7,6 +7,6 @@ This section is for guides regarding where to use which texture formats and a fe
 
 ### List of Guides
 
-- [Texture Formats And Where To Use Them](./TextureFormatsAndWhereToUseThem)
+- [Texture Formats And Where To Use Them](./TextureFormatsAndWhereToUseThem.md)
 
 **Further Guides will be added in the future**
