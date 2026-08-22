@@ -5,7 +5,7 @@ Kerbal Space Program is able to use different types of texture formats that appl
 While most mods have documentation on what texture formats to use in which situation in some cases said documentation is either incomplete or outdated, so this guide aims its best to cover all the texture formats and their use cases for Kopernicus, ParallaxContinued, Scatterer, EVE Volumetrics V5 & Singularity.
 
 >  [!TIP]
-> For further information on the .dds format check out ballisticfox's guide [here](/Guides/DDSFormatGuide/index.md)
+> For further information on the .dds format check out ballisticfox's guide [here](./Guides/DDSFormatGuide/index.md)
 
 ---
 
