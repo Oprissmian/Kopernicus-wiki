@@ -25,7 +25,36 @@ While most mods have documentation on what texture formats to use in which situa
 | Noise Map         | .dds (BC4)        | Yes   | Only used for the Star Shader ( `type = Star` in the ScaledVersion node). |
 | Sunspot Map       | .dds (BC4)        | Yes   | Only used for the Star Shader ( `type = Star` in the ScaledVersion node). |
 | Terrain Texture(s) | .dds (BC7)       | Yes   | This should by a greyscaled texture of e.g. soil with the alpha value influencing the gloss. |
-| Terrain Normal Map(s) | .dds (BC3n/DXT5nm) | Yes | See the explanation given in the Scaled Normal Map row. |
-| PQS Heightmap      | .dds (R8 for 8 bit; R16 for 16 bit)     | No    | For use in the PQS Mods `VertexHeightMap`, `VertexMitchellNetravaliHeightMap` or `VertexHeightMapBicubic` (VertexHeightMapBicubic is provided by [AdvancedPQSTools](https://github.com/CharonSSS/AdvancedPQSTools), VertexMitchellNetravaliHeightMap is provided by the [mod of the same name](https://github.com/pkmniako/Kopernicus_VertexMitchellNetravaliHeightMap)). |
-| PQS Colormap      | .dds (BC7)        | No    | For use in the PQS Mods `VertexColorMap` or `VertexColorMapBlend`. For celestial bodies with oceans it is highly recommended to use a separate Colormap for PQS, otherwise for non-oceanic/vaccum worlds you can use the same Colormap used by `ScaledVersion`. |
+| Terrain Normal Map(s) | .dds (BC3n/DXT5nm) | Yes | See the explanation given in the Scaled Normal Map row. Terrain Normals also should be generated from a displacement map. |
+| PQS Height Map      | .dds (R8 for 8 bit; R16 for 16 bit)     | No    | For use in the PQS Mods `VertexHeightMap`, `VertexMitchellNetravaliHeightMap` or `VertexHeightMapBicubic` (VertexHeightMapBicubic is provided by [AdvancedPQSTools](https://github.com/CharonSSS/AdvancedPQSTools), VertexMitchellNetravaliHeightMap is provided by the [mod of the same name](https://github.com/pkmniako/Kopernicus_VertexMitchellNetravaliHeightMap)). |
+| PQS Color Map      | .dds (BC7)        | No    | For use in the PQS Mods `VertexColorMap` or `VertexColorMapBlend`. For celestial bodies with oceans it is highly recommended to use a separate Colormap for PQS, otherwise for non-oceanic/vaccum worlds you can use the same Colormap used by `ScaledVersion`. |
+| Map Decal Height Map | .dds (R8 for 8 bit; R16 for 16 bit) | No    | For use in the PQS Mods `MapDecal` or `MapDecalTangent` if they use a Heightmap. |
+| Map Decal Color Map | .dds (BC7)       | No    | For use in the PQS Mods `MapDecal` or `MapDecalTangent` if they use a Colormap. |
+| PQS Emissive Map  | .dds (BC1/DXT1)   | Yes   | Recommended to use the same Emissive Map used by `ScaledVersion`. |
+| Ocean Texture     | .dds (BC7)        | Yes   | Used by `waterTex` and `waterTex1` in the Ocean's `Material` node. |
+| Ocean Normal Map  | .dds (BC3n/DXT5nm) | Yes  | See the explanation given in the Scaled Normal Map row. Used by `bumpMap` in the Ocean's `Material` node. |
+| Ocean Emissive Map | .dds (BC1/DXT1)  | Yes   | Recommended to use the same Emissive Map used by `ScaledVersion`. |
+| HazardousBody Heat Map | .dds (BC4)   | No    | Used for heat map used by the Hazardous Body node. |
+
+---
+
+### Singularity Textures
+
+**More info about Singularity can be found on the [Singularity Wiki](https://github.com/LGhassen/Singularity/wiki)**
+
+| Useage Case       | Format to use (subformat/compression for .dds is in parentheses)    | Mipmaps recommended?   | Notes |
+| :-----            | :---              | :---: | ------- |
+| Accretion Disk Texture | .dds (BC3/DXT5) | No     | The alpha value in the texture controls the transparency of the accretion disk. |
+
+---
+
+### Scatterer Textures
+
+**More info about Scatterer can be found on the [Scatterer Wiki](https://github.com/LGhassen/Scatterer/wiki)**
+
+| Useage Case       | Format to use (subformat/compression for .dds is in parentheses)    | Mipmaps recommended?   | Notes |
+| :-----            | :---              | :---: | ------- |
+| Sunflare Texture(s) | .png            | No    | Stock Scatterer and most planet mods adding their own Scatterer textures use .png as the texture format, otherwise if you don't mind compression artifacts use .dds with BC3/DXT5 compression, this applies to all texture useages in Scatterer. |
+| Sunflare Ghost Texture(s) | .png      | No    |       |
+| Caustics Texture(s) | .png            | No    |       |
 
