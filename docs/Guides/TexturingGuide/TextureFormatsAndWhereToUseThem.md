@@ -58,3 +58,13 @@ While most mods have documentation on what texture formats to use in which situa
 | Sunflare Ghost Texture(s) | .png      | No    |       |
 | Caustics Texture(s) | .png            | No    |       |
 
+---
+
+### Parallax Continued Textures
+
+**More info about Parallax Continued can be found on the [Parallax Continued Wiki](https://github.com/Gameslinx/Parallax-Continued/wiki)**
+
+| Useage Case       | Format to use (subformat/compression for .dds is in parentheses)    | Mipmaps recommended?   | Notes |
+| :-----            | :---              | :---: | ------- |
+| Terrain Textures  | .dds (BC7)        | Yes   | Used for the Low, Mid, High & Steep Terrain Textures; alpha value in the texture influences glossiness. |
+| Terrain Normal Maps | .dds (BC5)      | Yes   | Used for the Low, Mid, High & Steep Terrain Normal-/Bumpmaps; these will have to be generated from each individual Terrain Texture's Displacement Map. |
