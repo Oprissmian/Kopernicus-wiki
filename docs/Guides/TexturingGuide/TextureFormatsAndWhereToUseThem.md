@@ -18,6 +18,7 @@ While most mods have documentation on what texture formats to use in which situa
 | Biome Map         | .truecolor        | No    | While some mods use L8 .dds or other formats .truecolor allows for the most colors and is the easist to make. |
 | Ring Texture      | .dds (BC7)        | Depends | Use mipmaps if the ring uses a tiled texture, otherwise if the texture isn't tiled don't use mipmaps. |
 | Backlit Ring Texture | .dds (BC7)     | Depends | Use mipmaps if the ring uses a tiled texture, otherwise if the texture isn't tiled don't use mipmaps. |
+| Orbit Icon Texture | .png             | No    | Most mods use .png for their orbit icons as their performance impact is very minimal, if you don't mind compression artifacts use .dds with BC7 compression. |
 | Scaled Color Map  | .dds (BC7)        | Yes   | The alpha value in the texture influences the gloss of the Scaled Color Map, it is recommended on planets with oceans to use very low alpha for the parts of the texture representing land and very high/full alpha for the parts of the texture representing ocean. |
 | Scaled Normal Map | .dds (BC3n/DXT5nm) | Yes  | While KSPTextureLoader allows for BC5 normals to be loaded into the game the current Kopernicus shaders are not yet built to use BC5 for normal maps. |
 | Scaled Emissive Map | .dds (BC1/DXT1) | Yes   | Needs [VertexColorMapEmissive](https://github.com/jamespglaze/VertexColorMapEmissive), using `blendMode = Additive`. |
@@ -68,3 +69,8 @@ While most mods have documentation on what texture formats to use in which situa
 | :-----            | :---              | :---: | ------- |
 | Terrain Textures  | .dds (BC7)        | Yes   | Used for the Low, Mid, High & Steep Terrain Textures; alpha value in the texture influences glossiness. |
 | Terrain Normal Maps | .dds (BC5)      | Yes   | Used for the Low, Mid, High & Steep Terrain Normal-/Bumpmaps; these will have to be generated from each individual Terrain Texture's Displacement Map. |
+| Terrain Normal Maps (Emissive) | .dds (BC7) | Yes | Used on emissive celestial bodies, with the emissive intensity stored in the texture's alpha channel. |
+| Terrain Displacement Map | .dds (BC7) | Yes   | The following channels correspond for the following terrain textures' displacement maps: Red = Low, Green = Mid, Blue = High, Alpha = Steep . |
+| Terrain Influence Map | .dds (BC7)    | Yes   | The following channels correspond for the following terrain textures' influence maps: Red = Low, Green = Mid, Blue = High, Alpha = Steep . |
+| Terrain Occlusion Map | .dds (BC7)    | Yes   | The following channels correspond for the following terrain textures' occlusion maps: Red = Low, Green = Mid, Blue = High, Alpha = Steep . |
+| Scaled Height Map | .dds (BC4)        | Yes
